@@ -60,6 +60,16 @@ public class Auteur implements Serializable {
 
 
 
+	public Auteur(String nom, String prenom, String langue, String genre) {
+		super();
+		this.nom = nom;
+		this.prenom = prenom;
+		this.langue = langue;
+		this.genre = genre;
+	}
+
+
+
 	public long getId() {
 		return id;
 	}

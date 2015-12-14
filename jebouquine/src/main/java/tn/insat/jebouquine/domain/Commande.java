@@ -47,6 +47,8 @@ public class Commande implements Serializable {
 	@OneToOne @MapsId
     Facture facture;
 	
+ 
+	
 	@ManyToMany
 	  @JoinTable(
 	      name="commande_livre",
@@ -55,6 +57,14 @@ public class Commande implements Serializable {
 	      inverseJoinColumns=
 	      	@JoinColumn(name="Livre_ID", nullable=true, updatable=true))
 	  private List<Livre> livres;
+	
+	
+	@OneToOne(mappedBy="commande") 
+	Livraison livraison; 
+	
+	@ManyToOne(fetch=FetchType.LAZY)
+    @JoinColumn(name="Panier_ID")
+	private Panier panier;
 	
 	public Commande() {} ; 
 	

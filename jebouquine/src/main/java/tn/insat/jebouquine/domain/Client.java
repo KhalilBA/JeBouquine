@@ -30,10 +30,14 @@ import javax.persistence.*;
 		@OneToMany(targetEntity=Commande.class,mappedBy="client")
 	    List<Commande> commandes ;
 		
+		@OneToOne(mappedBy="client")  
+		Panier panier ;
+		
 		
 		public Client()
 		{}
-
+		
+		
 		
 
 

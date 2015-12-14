@@ -16,7 +16,7 @@ public class GenericDAOImpl<T, PK extends Serializable> implements GenericDAO<T,
 	protected Class<T> entityClass;
 	//Start the factory
 	ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
-	 EntityManagerFactory emf=context.getBean("entityManagerFactory",EntityManagerFactory.class);
+	EntityManagerFactory emf=context.getBean("entityManagerFactory",EntityManagerFactory.class);
 	// Create entity manager
 	 EntityManager entityManager=emf.createEntityManager();
 	
@@ -28,12 +28,8 @@ public class GenericDAOImpl<T, PK extends Serializable> implements GenericDAO<T,
 	}
 	
 	public void create(T object_in) {
-		try{
 	    this.entityManager.persist(object_in);
 	
-	 } catch(Exception e) {
-         System.out.println(e);
-     }
 	}
 	
 	

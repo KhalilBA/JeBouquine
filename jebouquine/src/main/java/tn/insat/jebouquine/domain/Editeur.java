@@ -45,6 +45,16 @@ public class Editeur implements Serializable {
 
 
 
+	public Editeur(String nom, String fondateur, String statue, String siege, String site_web) {
+		super();
+		this.nom = nom;
+		this.fondateur = fondateur;
+		this.statue = statue;
+		this.siege = siege;
+		this.site_web = site_web;
+	}
+
+
 	public String getNom() {
 		return nom;
 	}

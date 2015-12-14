@@ -1,4 +1,5 @@
 package tn.insat.jebouquine.test;
+import java.util.ArrayList;
 import java.util.List;
 
 import tn.insat.jebouquine.dataaccess.GenericDAO;
@@ -44,15 +45,21 @@ public class Test {
 		
 		
 		GenericDAO<Livre, Long> dao = new GenericDAOImpl<Livre, Long>(Livre.class);
-		List<Commande> com =null ; 
-		List<Auteur> aut = null; 
-		//aut.add(new Auteur("mourad", "mohsen", "francais", "thriller",null));
+		GenericDAO<Editeur, Long> dao2 = new GenericDAOImpl<Editeur, Long>(Editeur.class);
+		GenericDAO<Auteur, Long> dao3 = new GenericDAOImpl<Auteur, Long>(Auteur.class);
+		List<Commande> com =  new ArrayList<Commande>(); 
+		List<Auteur> aut = new ArrayList<Auteur>();
+		Auteur t =new Auteur("mourad", "mohsen", "francais", "thriller");
+		aut.add(t);
+		dao3.create(t);
+		Editeur edit =new Editeur("poche", "khalil", "ff", "france", "gmail");
+		dao2.create(edit);
 		
-		Livre l = new Livre("l'eventreur", "horreur",34,"jaque l'eventreur en queste ...", 45668889,"13/07/2001" ,com ,aut  ,new Editeur("poche", "khalil", "ff", "france", "gmail",null));
+		
+		Livre l = new Livre("l'eventreur", "horreur",34,"jaque l'eventreur en queste ...", 45668889,"13/07/2001" ,com ,aut  ,edit);
 				
 				dao.create(l);
-			Livre a=dao.findByID((long) 1);
-				System.out.println(a.getGenre());
+		
 			
 		System.out.println("Create1d ...");
 		System.out.println("Fin du programme !");

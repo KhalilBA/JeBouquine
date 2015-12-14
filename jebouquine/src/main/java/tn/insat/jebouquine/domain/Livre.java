@@ -45,9 +45,7 @@ public class Livre implements Serializable {
 	
 	public Livre(){} ; 
 	
-	
-	
-	
+
 
 	public Livre(String titre, String genre, int nb_page, String resume, int iSBN, String date_sortie,
 			List<Commande> commandes, List<Auteur> auteurs, Editeur editeur) {
@@ -62,8 +60,6 @@ public class Livre implements Serializable {
 		this.auteurs = auteurs;
 		this.editeur = editeur;
 	}
-
-
 
 
 
