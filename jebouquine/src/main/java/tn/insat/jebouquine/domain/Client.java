@@ -34,15 +34,22 @@ import javax.persistence.*;
 		public Client()
 		{}
 
-		public Client(String nom, String prenom, String adresse, String email) {
+		
+
+
+
+		public Client(String nom, String prenom, String adresse, String email, List<Commande> commandes) {
 			super();
 			this.nom = nom;
 			this.prenom = prenom;
 			this.adresse = adresse;
 			this.email = email;
+			this.commandes = commandes;
 		}
 
-		
+
+
+
 
 		public String getNom() {
 			return nom;

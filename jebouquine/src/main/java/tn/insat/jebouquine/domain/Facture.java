@@ -36,6 +36,9 @@ public class Facture implements Serializable {
 	
 	public Facture() {} ; 
 	
+	
+
+
 	public Facture(Date date, float tVA, int remise, float totalettc) {
 		super();
 		this.date = date;
@@ -43,6 +46,8 @@ public class Facture implements Serializable {
 		this.remise = remise;
 		this.totalettc = totalettc;
 	}
+
+
 
 
 	public Date getDate() {

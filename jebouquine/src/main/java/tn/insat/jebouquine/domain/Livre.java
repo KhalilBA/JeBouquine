@@ -47,8 +47,10 @@ public class Livre implements Serializable {
 	
 	
 	
+	
+
 	public Livre(String titre, String genre, int nb_page, String resume, int iSBN, String date_sortie,
-			List<Auteur> auteurs) {
+			List<Commande> commandes, List<Auteur> auteurs, Editeur editeur) {
 		super();
 		this.titre = titre;
 		this.genre = genre;
@@ -56,8 +58,14 @@ public class Livre implements Serializable {
 		this.resume = resume;
 		ISBN = iSBN;
 		this.date_sortie = date_sortie;
+		this.commandes = commandes;
 		this.auteurs = auteurs;
+		this.editeur = editeur;
 	}
+
+
+
+
 
 	public String getTitre() {
 		return titre;

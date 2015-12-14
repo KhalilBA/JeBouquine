@@ -32,6 +32,7 @@ public class Editeur implements Serializable {
 	
 	public Editeur() {}
 
+	
 	public Editeur(String nom, String fondateur, String statue, String siege, String site_web, List<Livre> livres) {
 		super();
 		this.nom = nom;
@@ -41,6 +42,8 @@ public class Editeur implements Serializable {
 		this.site_web = site_web;
 		this.livres = livres;
 	}
+
+
 
 	public String getNom() {
 		return nom;

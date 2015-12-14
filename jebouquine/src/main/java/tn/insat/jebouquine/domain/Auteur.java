@@ -47,26 +47,18 @@ public class Auteur implements Serializable {
 	public Auteur()
 	{} ; 
 	
-	public Auteur( String nom, String prenom, String langue, String genre) {
-		super();
-		
-		this.nom = nom;
-		this.prenom = prenom;
-		this.langue = langue;
-		this.genre = genre;
-	}
 	
 
-
-	public Auteur(long id, String nom, String prenom, String langue, String genre, List<Livre> livres) {
+	public Auteur(String nom, String prenom, String langue, String genre, List<Livre> livres) {
 		super();
-		this.id = id;
 		this.nom = nom;
 		this.prenom = prenom;
 		this.langue = langue;
 		this.genre = genre;
 		this.livres = livres;
 	}
+
+
 
 	public long getId() {
 		return id;

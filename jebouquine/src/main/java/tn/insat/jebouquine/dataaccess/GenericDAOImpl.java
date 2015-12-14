@@ -49,7 +49,7 @@ public class GenericDAOImpl<T, PK extends Serializable> implements GenericDAO<T,
 	}
 	
 	public T findByID(PK id) {
-	 return this.entityManager.find(entityClass, id);
+	 return this.entityManager.find(entityClass,id);
 		
 	}
 	

@@ -58,11 +58,21 @@ public class Commande implements Serializable {
 	
 	public Commande() {} ; 
 	
-	public Commande(Date date, float totale) {
+
+	
+	
+	
+	
+	public Commande(Date date, float totale, Client client, Facture facture, List<Livre> livres) {
 		super();
 		this.date = date;
 		this.totale = totale;
+		this.client = client;
+		this.facture = facture;
+		this.livres = livres;
 	}
+
+
 	public Date getDate() {
 		return date;
 	}

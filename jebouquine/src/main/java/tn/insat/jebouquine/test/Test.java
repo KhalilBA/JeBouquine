@@ -1,20 +1,12 @@
 package tn.insat.jebouquine.test;
-import tn.insat.jebouquine.dataaccess.*;
-
-
 import java.util.List;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.PersistenceContext;
-
-import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-
-import com.sun.xml.internal.bind.CycleRecoverable.Context;
-
+import tn.insat.jebouquine.dataaccess.GenericDAO;
+import tn.insat.jebouquine.dataaccess.GenericDAOImpl;
 import tn.insat.jebouquine.domain.Auteur;
-import tn.insat.jebouquine.domain.Client;
+import tn.insat.jebouquine.domain.Commande;
+import tn.insat.jebouquine.domain.Editeur;
+import tn.insat.jebouquine.domain.Livre;
 
 public class Test {
 
@@ -49,10 +41,20 @@ public class Test {
 ////		
 //		// Clean up
 //		context.close();
-		GenericDAO<Auteur, String> dao = new GenericDAOImpl<Auteur, String>(Auteur.class);
-		Auteur auteur = new Auteur("victor","hugo","francais","arabe");
-		dao.create(auteur);
-		System.out.println("Created ...");
+		
+		
+		GenericDAO<Livre, Long> dao = new GenericDAOImpl<Livre, Long>(Livre.class);
+		List<Commande> com =null ; 
+		List<Auteur> aut = null; 
+		//aut.add(new Auteur("mourad", "mohsen", "francais", "thriller",null));
+		
+		Livre l = new Livre("l'eventreur", "horreur",34,"jaque l'eventreur en queste ...", 45668889,"13/07/2001" ,com ,aut  ,new Editeur("poche", "khalil", "ff", "france", "gmail",null));
+				
+				dao.create(l);
+			Livre a=dao.findByID((long) 1);
+				System.out.println(a.getGenre());
+			
+		System.out.println("Create1d ...");
 		System.out.println("Fin du programme !");
 		
 	}
