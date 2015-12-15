@@ -27,11 +27,13 @@ public class Editeur implements Serializable {
 	private String siege ; 
 	private String site_web ; 
 	
-	@OneToMany(fetch=FetchType.LAZY, mappedBy="editeur")
+	@OneToMany(mappedBy="editeur")
     private List<Livre> livres ;
 	
 	public Editeur() {}
-
+	
+	
+	
 	
 	public Editeur(String nom, String fondateur, String statue, String siege, String site_web, List<Livre> livres) {
 		super();

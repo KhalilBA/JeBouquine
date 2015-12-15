@@ -3,7 +3,9 @@ package tn.insat.jebouquine.domain;
 import java.io.Serializable;
 import java.sql.Date;
 import java.util.List;
+import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -40,23 +42,15 @@ public class Commande implements Serializable {
 	private float totale;
 	
 	
-	@ManyToOne(fetch=FetchType.LAZY)
-	  @JoinColumn(name="Client_ID")
-	  private Client client;
+	@ManyToMany(cascade=CascadeType.ALL)  
+    @JoinTable(name="commande_livre", joinColumns=
+    @JoinColumn(name="commande_id"), inverseJoinColumns=
+    @JoinColumn(name="livre_id"))  
+	private Set<Livre> Livres;
 	
-	@OneToOne @MapsId
+	
+	@OneToOne
     Facture facture;
-	
- 
-	
-	@ManyToMany
-	  @JoinTable(
-	      name="commande_livre",
-	      joinColumns=
-	      	@JoinColumn(name="Commande_ID",nullable=true, updatable=true),
-	      inverseJoinColumns=
-	      	@JoinColumn(name="Livre_ID", nullable=true, updatable=true))
-	  private List<Livre> livres;
 	
 	
 	@OneToOne(mappedBy="commande") 
@@ -64,6 +58,8 @@ public class Commande implements Serializable {
 	
 	@ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name="Panier_ID")
+	
+	
 	private Panier panier;
 	
 	public Commande() {} ; 
@@ -71,15 +67,75 @@ public class Commande implements Serializable {
 
 	
 	
-	
-	
-	public Commande(Date date, float totale, Client client, Facture facture, List<Livre> livres) {
-		super();
-		this.date = date;
-		this.totale = totale;
-		this.client = client;
+
+
+	public Set<Livre> getLivres() {
+		return Livres;
+	}
+
+
+
+
+
+
+	public void setLivres(Set<Livre> livres) {
+		Livres = livres;
+	}
+
+
+
+
+
+
+	public Facture getFacture() {
+		return facture;
+	}
+
+
+
+
+
+
+	public void setFacture(Facture facture) {
 		this.facture = facture;
-		this.livres = livres;
+	}
+
+
+
+
+
+
+	public Livraison getLivraison() {
+		return livraison;
+	}
+
+
+
+
+
+
+	public void setLivraison(Livraison livraison) {
+		this.livraison = livraison;
+	}
+
+
+
+	public Panier getPanier() {
+		return panier;
+	}
+
+
+
+
+	public void setPanier(Panier panier) {
+		this.panier = panier;
+	}
+
+
+
+
+	public void setId(long id) {
+		this.id = id;
 	}
 
 

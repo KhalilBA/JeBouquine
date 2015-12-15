@@ -34,31 +34,8 @@ public class Auteur implements Serializable {
 	private String langue ; 
 	private String genre ;
 	
-	 @ManyToMany
-	  @JoinTable(
-	      name="Auteur_livre",
-	      joinColumns=
-	      	@JoinColumn(name="Auteur_ID", referencedColumnName="auteur_id"),
-	      inverseJoinColumns=
-	      	@JoinColumn(name="Livre_ID", referencedColumnName="livre_id"))
-	  private List<Livre> livres;
+	public Auteur(){} ; 
 	
-	
-	public Auteur()
-	{} ; 
-	
-	
-
-	public Auteur(String nom, String prenom, String langue, String genre, List<Livre> livres) {
-		super();
-		this.nom = nom;
-		this.prenom = prenom;
-		this.langue = langue;
-		this.genre = genre;
-		this.livres = livres;
-	}
-
-
 
 	public Auteur(String nom, String prenom, String langue, String genre) {
 		super();

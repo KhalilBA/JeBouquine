@@ -1,19 +1,30 @@
 package tn.insat.jebouquine.dataaccess;
 
 import java.io.Serializable;
-import java.lang.reflect.ParameterizedType;
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
-import javax.persistence.PersistenceContext;
-import javax.persistence.PersistenceException;
 
+import org.hibernate.Query;
+import org.hibernate.Transaction;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import tn.insat.jebouquine.domain.Livre;
 
 
 public class GenericDAOImpl<T, PK extends Serializable> implements GenericDAO<T, PK> {
 
 	protected Class<T> entityClass;
+	public Class<T> getEntityClass() {
+		return entityClass;
+	}
+
+	public void setEntityClass(Class<T> entityClass) {
+		this.entityClass = entityClass;
+	}
+
 	//Start the factory
 	ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 	EntityManagerFactory emf=context.getBean("entityManagerFactory",EntityManagerFactory.class);
@@ -48,5 +59,21 @@ public class GenericDAOImpl<T, PK extends Serializable> implements GenericDAO<T,
 	 return this.entityManager.find(entityClass,id);
 		
 	}
+	
+	public List<T> findAll() {
+        List<T> toExport = null;
+    
+        try {
+            
+            Query q = this.entityManager.createQuery("from " + entityClass.getSimpleName());
+            toExport = (List<T>) q.list();
+        } catch (Exception e) {
+        	 
+            e.printStackTrace();
+        }
+        return toExport;
+    }
+	
+	
 	
 	}

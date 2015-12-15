@@ -27,8 +27,6 @@ import javax.persistence.*;
 		private String adresse ; 
 		private String email ; 
 		
-		@OneToMany(targetEntity=Commande.class,mappedBy="client")
-	    List<Commande> commandes ;
 		
 		@OneToOne(mappedBy="client")  
 		Panier panier ;
@@ -42,14 +40,7 @@ import javax.persistence.*;
 
 
 
-		public Client(String nom, String prenom, String adresse, String email, List<Commande> commandes) {
-			super();
-			this.nom = nom;
-			this.prenom = prenom;
-			this.adresse = adresse;
-			this.email = email;
-			this.commandes = commandes;
-		}
+	
 
 
 

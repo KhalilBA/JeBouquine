@@ -2,6 +2,7 @@ package tn.insat.jebouquine.domain;
 
 import java.io.Serializable;
 import java.util.List;
+import java.util.Set;
 
 import javax.persistence.* ; 
 
@@ -29,26 +30,22 @@ public class Livre implements Serializable {
 	private int ISBN ; 
 	private  String date_sortie ; 
 	
-	@ManyToMany(mappedBy="livres")
+	
+	
+	  @ManyToMany(cascade=CascadeType.ALL)  
+	  @JoinTable(name="auteur_livre", joinColumns=
+	  @JoinColumn(name="livre_id"), inverseJoinColumns=
+	  @JoinColumn(name="auteur_id")) 
+	  private Set<Auteur> auteurs;
 	  
-	private List<Commande> commandes;
-	
-	@ManyToMany(mappedBy="livres")
-	  private List<Auteur> auteurs;
-	
-	
-	@ManyToOne(fetch=FetchType.LAZY)
-    @JoinColumn(name="Editeur_ID")
-	private Editeur editeur;
+	 @ManyToOne
+	 private Editeur editeur;
 
 	
-	
-	public Livre(){} ; 
-	
-
-
-	public Livre(String titre, String genre, int nb_page, String resume, int iSBN, String date_sortie,
-			List<Commande> commandes, List<Auteur> auteurs, Editeur editeur) {
+	  public Livre(){} ; 
+	  
+	  
+	  public Livre(String titre, String genre, int nb_page, String resume, int iSBN, String date_sortie) {
 		super();
 		this.titre = titre;
 		this.genre = genre;
@@ -56,10 +53,45 @@ public class Livre implements Serializable {
 		this.resume = resume;
 		ISBN = iSBN;
 		this.date_sortie = date_sortie;
-		this.commandes = commandes;
-		this.auteurs = auteurs;
+	}
+
+
+
+
+
+
+	public Editeur getEditeur() {
+		return editeur;
+	}
+
+
+	public void setEditeur(Editeur editeur) {
 		this.editeur = editeur;
 	}
+
+
+	public Set<Auteur> getAuteurs() {
+		return auteurs;
+	}
+
+
+	public Set<Auteur> getAuthors()  
+	    {  
+	        return auteurs;  
+	    }  
+	
+	
+	public void setAuteurs(Set<Auteur> auteurs) {
+		this.auteurs = auteurs;
+	}
+
+
+
+	
+	
+
+
+	
 
 
 
@@ -111,13 +143,6 @@ public class Livre implements Serializable {
 		this.date_sortie = date_sortie;
 	}
 
-	public List<Auteur> getAuteurs() {
-		return auteurs;
-	}
-
-	public void setAuteurs(List<Auteur> auteurs) {
-		this.auteurs = auteurs;
-	}
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;

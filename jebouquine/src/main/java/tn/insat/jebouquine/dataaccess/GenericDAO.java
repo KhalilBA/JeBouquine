@@ -1,6 +1,7 @@
 package tn.insat.jebouquine.dataaccess;
 
 import java.io.Serializable;
+import java.util.List;
 
 public interface GenericDAO<T, PK extends Serializable> {
 	
@@ -10,5 +11,6 @@ public interface GenericDAO<T, PK extends Serializable> {
 	public abstract T findByID(PK id);
 	public abstract void update(T object_in);
 	public abstract void delete(T object_in);
+	public abstract List<T> findAll();
 
 }

@@ -8,6 +8,7 @@ import tn.insat.jebouquine.domain.Auteur;
 import tn.insat.jebouquine.domain.Commande;
 import tn.insat.jebouquine.domain.Editeur;
 import tn.insat.jebouquine.domain.Livre;
+import tn.insat.jebouquine.service.LivreService;
 
 public class Test {
 
@@ -44,22 +45,25 @@ public class Test {
 //		context.close();
 		
 		
-		GenericDAO<Livre, Long> dao = new GenericDAOImpl<Livre, Long>(Livre.class);
-		GenericDAO<Editeur, Long> dao2 = new GenericDAOImpl<Editeur, Long>(Editeur.class);
-		GenericDAO<Auteur, Long> dao3 = new GenericDAOImpl<Auteur, Long>(Auteur.class);
-		List<Commande> com =  new ArrayList<Commande>(); 
-		List<Auteur> aut = new ArrayList<Auteur>();
-		Auteur t =new Auteur("mourad", "mohsen", "francais", "thriller");
-		aut.add(t);
-		dao3.create(t);
-		Editeur edit =new Editeur("poche", "khalil", "ff", "france", "gmail");
-		dao2.create(edit);
+//		GenericDAO<Livre, Long> dao = new GenericDAOImpl<Livre, Long>(Livre.class);
+//		GenericDAO<Editeur, Long> dao2 = new GenericDAOImpl<Editeur, Long>(Editeur.class);
+//		GenericDAO<Auteur, Long> dao3 = new GenericDAOImpl<Auteur, Long>(Auteur.class);
+//		List<Commande> com =  new ArrayList<Commande>(); 
+//		List<Auteur> aut = new ArrayList<Auteur>();
+//		Auteur t =new Auteur("mourad", "mohsen", "francais", "thriller");
+//		aut.add(t);
+//		dao3.create(t);
+//		Editeur edit =new Editeur("poche", "khalil", "ff", "france", "gmail");
+//		dao2.create(edit);
+//		
+//		
+//		Livre l = new Livre("l'eventreur", "horreur",34,"jaque l'eventreur en queste ...", 45668889,"13/07/2001" ,com ,aut  ,edit);
+//				
+//				dao.create(l);
 		
-		
-		Livre l = new Livre("l'eventreur", "horreur",34,"jaque l'eventreur en queste ...", 45668889,"13/07/2001" ,com ,aut  ,edit);
-				
-				dao.create(l);
-		
+		LivreService ls = new LivreService(); 
+		ls.create("miserable", "roman", 600, "il etait une fois", 3567899, "mardi13decembre");
+	
 			
 		System.out.println("Create1d ...");
 		System.out.println("Fin du programme !");
