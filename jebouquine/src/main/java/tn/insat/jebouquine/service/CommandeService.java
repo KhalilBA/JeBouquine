@@ -7,11 +7,9 @@ import java.util.Set;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import tn.insat.jebouquine.dataaccess.ClientRepository;
 import tn.insat.jebouquine.dataaccess.CommandeRepository;
 import tn.insat.jebouquine.dataaccess.LivreRepository;
 import tn.insat.jebouquine.dataaccess.PanierRepository;
-import tn.insat.jebouquine.domain.Client;
 import tn.insat.jebouquine.domain.Commande;
 import tn.insat.jebouquine.domain.Livre;
 import tn.insat.jebouquine.domain.Panier;
