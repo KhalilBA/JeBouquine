@@ -49,17 +49,12 @@ public class Commande implements Serializable {
 	private Set<Livre> Livres;
 	
 	
-	@OneToOne
-    Facture facture;
-	
 	
 	@OneToOne(mappedBy="commande") 
 	Livraison livraison; 
 	
 	@ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name="Panier_ID")
-	
-	
 	private Panier panier;
 	
 	public Commande() {} ; 

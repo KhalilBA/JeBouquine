@@ -21,7 +21,49 @@ public class Livraison implements Serializable {
 	private String description ; 
 	private String date ; 
 	
+	
 	@OneToOne
 	Commande commande ; 
+	
+	public Livraison(){}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public String getDate() {
+		return date;
+	}
+
+	public void setDate(String date) {
+		this.date = date;
+	}
+
+	public Commande getCommande() {
+		return commande;
+	}
+
+	public void setCommande(Commande commande) {
+		this.commande = commande;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}; 
+	
+	
+	
 
 }

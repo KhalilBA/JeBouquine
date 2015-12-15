@@ -3,10 +3,13 @@ package tn.insat.jebouquine.domain;
 import java.io.Serializable;
 import java.sql.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -32,6 +35,10 @@ public class Facture implements Serializable {
 	private int remise ; 
 	private float totalettc ;
 	
+	
+	@OneToOne(cascade=CascadeType.ALL)  
+	@JoinColumn(name="commande_id")
+	private Commande commande;
 	
 	
 	public Facture() {} ; 

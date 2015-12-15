@@ -28,22 +28,57 @@ import javax.persistence.*;
 		private String email ; 
 		
 		
-		@OneToOne(mappedBy="client")  
+		@OneToOne(cascade=CascadeType.ALL)  
+		@JoinColumn(name="adresse_id")
 		Panier panier ;
 		
 		
 		public Client()
 		{}
 		
-		
-		
+
+		public Client(String nom, String prenom, String adresse, String email) {
+			super();
+			this.nom = nom;
+			this.prenom = prenom;
+			this.adresse = adresse;
+			this.email = email;
+		}
 
 
 
-	
 
 
 
+
+
+
+
+
+
+		public long getId() {
+			return id;
+		}
+
+
+		public void setId(long id) {
+			this.id = id;
+		}
+
+
+		public Panier getPanier() {
+			return panier;
+		}
+
+
+		public void setPanier(Panier panier) {
+			this.panier = panier;
+		}
+
+
+		public static long getSerialversionuid() {
+			return serialVersionUID;
+		}
 
 
 		public String getNom() {
@@ -77,6 +112,8 @@ import javax.persistence.*;
 		public void setEmail(String email) {
 			this.email = email;
 		}
+
+
 
 		
 

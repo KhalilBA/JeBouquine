@@ -1,7 +1,6 @@
 package tn.insat.jebouquine.domain;
 
 import java.io.Serializable;
-import java.util.List;
 import java.util.Set;
 
 import javax.persistence.* ; 
@@ -38,7 +37,8 @@ public class Livre implements Serializable {
 	  @JoinColumn(name="auteur_id")) 
 	  private Set<Auteur> auteurs;
 	  
-	 @ManyToOne
+	 @ManyToOne(cascade=CascadeType.ALL)
+	 @JoinColumn(name="editeur_id")
 	 private Editeur editeur;
 
 	

@@ -1,13 +1,6 @@
 package tn.insat.jebouquine.test;
-import java.util.ArrayList;
-import java.util.List;
 
-import tn.insat.jebouquine.dataaccess.GenericDAO;
-import tn.insat.jebouquine.dataaccess.GenericDAOImpl;
-import tn.insat.jebouquine.domain.Auteur;
-import tn.insat.jebouquine.domain.Commande;
-import tn.insat.jebouquine.domain.Editeur;
-import tn.insat.jebouquine.domain.Livre;
+import tn.insat.jebouquine.service.ClientService;
 import tn.insat.jebouquine.service.LivreService;
 
 public class Test {
@@ -67,6 +60,9 @@ public class Test {
 			
 		System.out.println("Create1d ...");
 		System.out.println("Fin du programme !");
+		
+		ClientService cs =new ClientService();
+		cs.create("khalil", "Ben Ahmed", "Rue des juges", "gmail");
 		
 	}
 

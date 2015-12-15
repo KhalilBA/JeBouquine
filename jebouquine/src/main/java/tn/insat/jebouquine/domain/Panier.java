@@ -20,8 +20,6 @@ public class Panier implements Serializable {
 	@GeneratedValue(strategy=GenerationType.SEQUENCE,generator="pk_sequence")
 	@Column(name="livre_id", unique=true, nullable=false)
     private long id;
-	@OneToOne
-	Client client ; 
 	
 	@OneToMany(fetch=FetchType.LAZY, mappedBy="panier")
     private List<Commande> commandes ;
