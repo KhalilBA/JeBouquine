@@ -22,8 +22,9 @@ public class Livraison implements Serializable {
 	private String date ; 
 	
 	
-	@OneToOne
-	Commande commande ; 
+	@OneToOne(cascade=CascadeType.ALL)  
+	@JoinColumn(name="commande_id")
+	private Commande commande;
 	
 	public Livraison(){}
 

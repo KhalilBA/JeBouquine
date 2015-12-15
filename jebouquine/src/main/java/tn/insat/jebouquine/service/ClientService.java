@@ -14,6 +14,7 @@ public class ClientService {
 	public void create(String nom, String prenom, String adresse, String email)
 	{// Get the bean
 	ClientRepository repo = context.getBean(ClientRepository.class);
+	
 	Client client = new Client( nom,  prenom, adresse, email);
 	Panier panier = new Panier();
 	client.setPanier(panier);

@@ -38,11 +38,11 @@ public class Commande implements Serializable {
 	@Column(name="commande_id", unique=true, nullable=false)
     private long id;
 	
-	private Date date ; 
+	private String date ; 
 	private float totale;
 	
 	
-	@ManyToMany(cascade=CascadeType.ALL)  
+	@ManyToMany(fetch = FetchType.EAGER)  
     @JoinTable(name="commande_livre", joinColumns=
     @JoinColumn(name="commande_id"), inverseJoinColumns=
     @JoinColumn(name="livre_id"))  
@@ -50,18 +50,27 @@ public class Commande implements Serializable {
 	
 	
 	
-	@OneToOne(mappedBy="commande") 
-	Livraison livraison; 
-	
 	@ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name="Panier_ID")
 	private Panier panier;
 	
 	public Commande() {} ; 
 	
+	
+	
+	
 
-	
-	
+
+	public Commande(String date, float totale) {
+		super();
+		this.date = date;
+		this.totale = totale;
+		
+	}
+
+
+
+
 
 
 	public Set<Livre> getLivres() {
@@ -76,43 +85,6 @@ public class Commande implements Serializable {
 	public void setLivres(Set<Livre> livres) {
 		Livres = livres;
 	}
-
-
-
-
-
-
-	public Facture getFacture() {
-		return facture;
-	}
-
-
-
-
-
-
-	public void setFacture(Facture facture) {
-		this.facture = facture;
-	}
-
-
-
-
-
-
-	public Livraison getLivraison() {
-		return livraison;
-	}
-
-
-
-
-
-
-	public void setLivraison(Livraison livraison) {
-		this.livraison = livraison;
-	}
-
 
 
 	public Panier getPanier() {
@@ -134,10 +106,10 @@ public class Commande implements Serializable {
 	}
 
 
-	public Date getDate() {
+	public String getDate() {
 		return date;
 	}
-	public void setDate(Date date) {
+	public void setDate(String date) {
 		this.date = date;
 	}
 	public float getTotale() {

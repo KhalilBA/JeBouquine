@@ -1,6 +1,7 @@
 package tn.insat.jebouquine.test;
 
 import tn.insat.jebouquine.service.ClientService;
+import tn.insat.jebouquine.service.CommandeService;
 import tn.insat.jebouquine.service.LivreService;
 
 public class Test {
@@ -54,16 +55,24 @@ public class Test {
 //				
 //				dao.create(l);
 		
-		LivreService ls = new LivreService(); 
-		ls.create("miserable", "roman", 600, "il etait une fois", 3567899, "mardi13decembre");
-	
-			
-		System.out.println("Create1d ...");
-		System.out.println("Fin du programme !");
-		
 		ClientService cs =new ClientService();
-		cs.create("khalil", "Ben Ahmed", "Rue des juges", "gmail");
+		cs.create("amine", "boubaker", "bardo", "yahoo");
 		
+		LivreService ls = new LivreService(); 
+		ls.create("la belle", "roman", 300, "il etait une fois", 3487899, "mardi13decembre");
+		
+		CommandeService com = new CommandeService();
+		com.creat("avril", 23455);
+			
+		
+		
+		
+		
+		
+		
+		
+		
+		System.out.println("Fin du programme !");
 	}
 
 	
