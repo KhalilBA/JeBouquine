@@ -2,13 +2,16 @@ C:\Users\Khalil\Documents\GitHub\JeBouquine\jebouquine\src\main\java\tn\insat\je
 C:\Users\Khalil\Documents\GitHub\JeBouquine\jebouquine\src\main\java\tn\insat\jebouquine\dataaccess\ClientRepository.java
 C:\Users\Khalil\Documents\GitHub\JeBouquine\jebouquine\src\main\java\tn\insat\jebouquine\domain\Client.java
 C:\Users\Khalil\Documents\GitHub\JeBouquine\jebouquine\src\main\java\tn\insat\jebouquine\service\AuteurService.java
+C:\Users\Khalil\Documents\GitHub\JeBouquine\jebouquine\src\main\java\tn\insat\jebouquine\config\WebConfig.java
 C:\Users\Khalil\Documents\GitHub\JeBouquine\jebouquine\src\main\java\tn\insat\jebouquine\service\LivreService.java
+C:\Users\Khalil\Documents\GitHub\JeBouquine\jebouquine\src\main\java\tn\insat\jebouquine\servlet3\JebouquineInitializer.java
 C:\Users\Khalil\Documents\GitHub\JeBouquine\jebouquine\src\main\java\tn\insat\jebouquine\service\LivraisonService.java
 C:\Users\Khalil\Documents\GitHub\JeBouquine\jebouquine\src\main\java\tn\insat\jebouquine\test\Test.java
 C:\Users\Khalil\Documents\GitHub\JeBouquine\jebouquine\src\main\java\tn\insat\jebouquine\domain\Commande.java
 C:\Users\Khalil\Documents\GitHub\JeBouquine\jebouquine\src\main\java\tn\insat\jebouquine\service\CommandeService.java
 C:\Users\Khalil\Documents\GitHub\JeBouquine\jebouquine\src\main\java\tn\insat\jebouquine\dataaccess\PanierRepository.java
 C:\Users\Khalil\Documents\GitHub\JeBouquine\jebouquine\src\main\java\tn\insat\jebouquine\domain\Panier.java
+C:\Users\Khalil\Documents\GitHub\JeBouquine\jebouquine\src\main\java\tn\insat\jebouquine\web\controller\HomeController.java
 C:\Users\Khalil\Documents\GitHub\JeBouquine\jebouquine\src\main\java\tn\insat\jebouquine\domain\Facture.java
 C:\Users\Khalil\Documents\GitHub\JeBouquine\jebouquine\src\main\java\tn\insat\jebouquine\service\FactureService.java
 C:\Users\Khalil\Documents\GitHub\JeBouquine\jebouquine\src\main\java\tn\insat\jebouquine\dataaccess\CommandeRepository.java
