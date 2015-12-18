@@ -14,6 +14,7 @@ public class HomeController {
 		@RequestMapping(value="/basket",method=RequestMethod.GET)
 		public String basket() {
 			
+			//traitement 
 			
 			return "basket";
 			}
