@@ -117,8 +117,8 @@
             <div class="navbar-header">
 
                 <a class="navbar-brand home" href="index.html" data-animate-hover="bounce">
-                    <img src="img/logo.png" alt="Obaju logo" class="hidden-xs">
-                    <img src="img/logo-small.png" alt="Obaju logo" class="visible-xs"><span class="sr-only">Obaju - go to homepage</span>
+                    <img src="<c:url value='/resources/core/img/logo.png'/>" alt="Obaju logo" class="hidden-xs">
+                    <img src="<c:url value='/resources/core/img/logo-small.png'/>" alt="Obaju logo" class="visible-xs"><span class="sr-only">Obaju - go to homepage</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
@@ -278,12 +278,13 @@
                                         <div class="col-sm-3">
                                             <div class="banner">
                                                 <a href="#">
-                                                    <img src="img/banner.jpg" class="img img-responsive" alt="">
+                                              
+                                                    <img src="<c:url value='/resources/core/img/banner.jpg'/>" class="img img-responsive" alt="">
                                                 </a>
                                             </div>
                                             <div class="banner">
                                                 <a href="#">
-                                                    <img src="img/banner2.jpg" class="img img-responsive" alt="">
+                                                    <img src="<c:url value='/resources/core/img/banner2.jpg'/>" class="img img-responsive" alt="">
                                                 </a>
                                             </div>
                                         </div>
@@ -424,16 +425,16 @@
                 <div class="col-md-12">
                     <div id="main-slider">
                         <div class="item">
-                            <img src="img/main-slider1.jpg" alt="" class="img-responsive">
+                            <img src="<c:url value='/resources/core/img/main-slider1.jpg'/>" alt="" class="img-responsive">
                         </div>
                         <div class="item">
-                            <img class="img-responsive" src="img/main-slider2.jpg" alt="">
+                            <img class="img-responsive" src="<c:url value='/resources/core/img/main-slider2.jpg'/>" alt="">
                         </div>
                         <div class="item">
-                            <img class="img-responsive" src="img/main-slider3.jpg" alt="">
+                            <img class="img-responsive" src="<c:url value='/resources/core/img/main-slider3.jpg'/>" alt="">
                         </div>
                         <div class="item">
-                            <img class="img-responsive" src="img/main-slider4.jpg" alt="">
+                            <img class="img-responsive" src="<c:url value='/resources/core/img/main-slider4.jpg'/>" alt="">
                         </div>
                     </div>
                     <!-- /#main-slider -->
@@ -1038,7 +1039,25 @@
     <!-- *** SCRIPTS TO INCLUDE ***
  _________________________________________________________ -->
  
-
+  <spring:url value="/resources/core/js/jquery-1.11.0.min.js" var="jqueryminJs" />
+   <spring:url value="/resources/core/js/bootstrap.min.js" var="bootstrapminJs" />
+ <spring:url value="/resources/core/js/waypoints.min.js" var="waypointsJs" />
+ <spring:url value="/resources/core/js/modernizr.js" var="modernizrJs" />
+ <spring:url value="/resources/core/js/bootstrap-hover-dropdown.js" var="bootstrapJs" />
+ <spring:url value="/resources/core/js/owl.carousel.min.js" var="carouselJs" />
+ <spring:url value="/resources/core/js/front.js" var="frontJs" />
+  <spring:url value="/resources/core/js/respond.min.js" var="respondJs" />
+  <spring:url value="/resources/core/js/jquery.cookie.js" var="jqueryJs" />
+ 
+<script src="${jqueryminJs}"></script>
+<script src="${bootstrapminJs}"></script>
+<script src="${waypointsJs}"></script>
+<script src="${modernizrJs}"></script>
+<script src="${bootstrapJs}"></script>
+<script src="${carouselJs}"></script>
+<script src="${frontJs}"></script>
+<script src="${respondJs}"></script>
+<script src="${jqueryJs}"></script>
 
 
 
