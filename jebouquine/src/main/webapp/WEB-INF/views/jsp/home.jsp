@@ -14,8 +14,8 @@
       <meta name="author" content="Ondrej Svestka | ondrejsvestka.cz">
       <meta name="keywords" content="">
 
-      <title>
-          Obaju : e-commerce template
+    <title>
+          Jebouquine : Millions of books from all over the world
       </title>
 
       <meta name="keywords" content="">
@@ -42,14 +42,20 @@
 	 <link href="${owlthemeCss}" rel="stylesheet" />
 	 
 	 
-
      
-
-
-        
       <link rel="shortcut icon" href="favicon.png">
 
-
+ <style type="text/css">
+   .button {
+     background:none!important;
+     border:none; 
+     padding:0!important;
+     font: inherit;
+     /*border is optional*/
+     border-bottom:1px solid #444; 
+     cursor: pointer;
+}
+    </style>
 
 <title>Hello first time</title>
 </head>
@@ -67,9 +73,11 @@
                     <li><a href="#" data-toggle="modal" data-target="#login-modal">Login</a>
                     </li>
                     <li>
-                    <form:form action="register"  method="post" >
-                 	<input id="registerButton"  type="submit" value="register" >                
+                    <form:form action="register"  method="post" ><a >
+                  	<button  class=button   type="submit"  >	&nbsp	&nbspRegister</button>  </a>           
                		</form:form>
+               		
+               		
                     </li>
                     <li><a href="contact.html">Contact</a>
                     </li>
@@ -116,7 +124,7 @@
     <!-- *** NAVBAR ***
  _________________________________________________________ -->
 
-    <div class="navbar navbar-default yamm" role="navigation" id="navbar">
+      <div class="navbar navbar-default yamm" role="navigation" id="navbar">
         <div class="container">
             <div class="navbar-header">
 
@@ -146,72 +154,84 @@
                     <li class="active"><a href="index.html">Home</a>
                     </li>
                     <li class="dropdown yamm-fw">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Men <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">All Categories <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
                                 <div class="yamm-content">
                                     <div class="row">
                                         <div class="col-sm-3">
-                                            <h5>Clothing</h5>
+                                            <h5>New Arrivals</h5>
                                             <ul>
-                                                <li><a href="category.html">T-shirts</a>
+                                                <li><a href="category.html">Arts & Photography</a>
                                                 </li>
-                                                <li><a href="category.html">Shirts</a>
+                                                <li><a href="category.html">Biography & Memoirs</a>
                                                 </li>
-                                                <li><a href="category.html">Pants</a>
+                                                <li><a href="category.html">Comics & Graphic novels</a>
                                                 </li>
-                                                <li><a href="category.html">Accessories</a>
+                                                <li><a href="category.html">Computer & Technology</a>
+                                                </li>
+                                                <li><a href="category.html">Engineering & Transportation</a>
+                                                </li>
+                                                <li><a href="category.html">Humor & Entertainment</a>
+                                                </li>
+                                                <li><a href="category.html">Litterature & fiction</a>
+                                                </li>
+                                                <li><a href="category.html">Romance</a>
+                                                </li>
+                                                 <li><a href="category.html">Science fiction & Fantasy</a>
+                                                </li>
+                                                
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <h5>BestSellers</h5>
+                                            <ul>
+                                                <li><a href="category.html">English bestsellers</a>
+                                                </li>
+                                                <li><a href="category.html">French bestsellers</a>
+                                                </li>
+                                                <li><a href="category.html">Orient bestsellers</a>
+                                                </li>
+                                                <li><a href="category.html">Other language bestsellers</a>
                                                 </li>
                                             </ul>
                                         </div>
                                         <div class="col-sm-3">
-                                            <h5>Shoes</h5>
+                                            <h5>Award Winners</h5>
                                             <ul>
-                                                <li><a href="category.html">Trainers</a>
+                                                <li><a href="category.html">Literary Fiction</a>
                                                 </li>
-                                                <li><a href="category.html">Sandals</a>
+                                                <li><a href="category.html">General Nonfiction</a>
                                                 </li>
-                                                <li><a href="category.html">Hiking shoes</a>
+                                                <li><a href="category.html">Children's Books</a>
                                                 </li>
-                                                <li><a href="category.html">Casual</a>
+                                                <li><a href="category.html">Cooking and Gardening</a>
+                                                </li>
+                                                <li><a href="category.html">Mystery</a>
+                                                </li>
+                                                <li><a href="category.html">Sci-Fi and Fantasy</a>
+                                                </li>
+                                                <li><a href="category.html">Poetry</a>
                                                 </li>
                                             </ul>
                                         </div>
                                         <div class="col-sm-3">
-                                            <h5>Accessories</h5>
+                                            <h5>Sale Books</h5>
                                             <ul>
-                                                <li><a href="category.html">Trainers</a>
+                                                <li><a href="category.html">Litterature</a>
                                                 </li>
-                                                <li><a href="category.html">Sandals</a>
+                                                <li><a href="category.html">Mystery</a>
                                                 </li>
-                                                <li><a href="category.html">Hiking shoes</a>
+                                                <li><a href="category.html">Science Fiction and Fantasy</a>
                                                 </li>
-                                                <li><a href="category.html">Casual</a>
-                                                </li>
-                                                <li><a href="category.html">Hiking shoes</a>
-                                                </li>
-                                                <li><a href="category.html">Casual</a>
+                                                <li><a href="category.html">Business</a>
                                                 </li>
                                             </ul>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <h5>Featured</h5>
+                                            <h5>Indiespensable</h5>
                                             <ul>
-                                                <li><a href="category.html">Trainers</a>
+                                                <li><a href="category.html">Indiespensable</a>
                                                 </li>
-                                                <li><a href="category.html">Sandals</a>
-                                                </li>
-                                                <li><a href="category.html">Hiking shoes</a>
-                                                </li>
-                                            </ul>
-                                            <h5>Looks and trends</h5>
-                                            <ul>
-                                                <li><a href="category.html">Trainers</a>
-                                                </li>
-                                                <li><a href="category.html">Sandals</a>
-                                                </li>
-                                                <li><a href="category.html">Hiking shoes</a>
-                                                </li>
+                                                
                                             </ul>
                                         </div>
                                     </div>
@@ -222,63 +242,35 @@
                     </li>
 
                     <li class="dropdown yamm-fw">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Ladies <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Used <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
                                 <div class="yamm-content">
                                     <div class="row">
                                         <div class="col-sm-3">
-                                            <h5>Clothing</h5>
+                                            <h5>All Categories</h5>
                                             <ul>
-                                                <li><a href="category.html">T-shirts</a>
+                                                <li><a href="category.html">Arts & Photography</a>
                                                 </li>
-                                                <li><a href="category.html">Shirts</a>
+                                                <li><a href="category.html">Biography & Memoirs</a>
                                                 </li>
-                                                <li><a href="category.html">Pants</a>
+                                                <li><a href="category.html">Comics & Graphic novels</a>
                                                 </li>
-                                                <li><a href="category.html">Accessories</a>
+                                                <li><a href="category.html">Computer & Technology</a>
+                                                </li>
+                                                <li><a href="category.html">Engineering & Transportation</a>
+                                                </li>
+                                                <li><a href="category.html">Humor & Entertainment</a>
+                                                </li>
+                                                <li><a href="category.html">Litterature & fiction</a>
+                                                </li>
+                                                <li><a href="category.html">Romance</a>
+                                                </li>
+                                                 <li><a href="category.html">Science fiction & Fantasy</a>
                                                 </li>
                                             </ul>
                                         </div>
-                                        <div class="col-sm-3">
-                                            <h5>Shoes</h5>
-                                            <ul>
-                                                <li><a href="category.html">Trainers</a>
-                                                </li>
-                                                <li><a href="category.html">Sandals</a>
-                                                </li>
-                                                <li><a href="category.html">Hiking shoes</a>
-                                                </li>
-                                                <li><a href="category.html">Casual</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <h5>Accessories</h5>
-                                            <ul>
-                                                <li><a href="category.html">Trainers</a>
-                                                </li>
-                                                <li><a href="category.html">Sandals</a>
-                                                </li>
-                                                <li><a href="category.html">Hiking shoes</a>
-                                                </li>
-                                                <li><a href="category.html">Casual</a>
-                                                </li>
-                                                <li><a href="category.html">Hiking shoes</a>
-                                                </li>
-                                                <li><a href="category.html">Casual</a>
-                                                </li>
-                                            </ul>
-                                            <h5>Looks and trends</h5>
-                                            <ul>
-                                                <li><a href="category.html">Trainers</a>
-                                                </li>
-                                                <li><a href="category.html">Sandals</a>
-                                                </li>
-                                                <li><a href="category.html">Hiking shoes</a>
-                                                </li>
-                                            </ul>
-                                        </div>
+                                        
                                         <div class="col-sm-3">
                                             <div class="banner">
                                                 <a href="#">
@@ -300,26 +292,42 @@
                     </li>
 
                     <li class="dropdown yamm-fw">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Template <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Staff Picks<b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
                                 <div class="yamm-content">
                                     <div class="row">
                                         <div class="col-sm-3">
-                                            <h5>Shop</h5>
+                                            <h5>All</h5>
                                             <ul>
-                                                <li><a href="index.html">Homepage</a>
+                                                <li><a href="index.html">Staff Picks</a>
                                                 </li>
-                                                <li><a href="category.html">Category - sidebar left</a>
+                                                <li><a href="category.html">Staff top five</a>
                                                 </li>
-                                                <li><a href="category-right.html">Category - sidebar right</a>
+                                                <li><a href="category-right.html">The short list</a>
                                                 </li>
-                                                <li><a href="category-full.html">Category - full width</a>
+                                                <li><a href="category-full.html">indiespensable</a>
                                                 </li>
-                                                <li><a href="detail.html">Product detail</a>
+                                                <li><a href="detail.html">25 books to read before you die</a>
                                                 </li>
                                             </ul>
                                         </div>
+                                        
+                                        
+                                    </div>
+                                </div>
+                                <!-- /.yamm-content -->
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    
+                                        <li class="dropdown yamm-fw">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">User<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <div class="yamm-content">
+                                    <div class="row">                                      
                                         <div class="col-sm-3">
                                             <h5>User</h5>
                                             <ul>
@@ -334,47 +342,16 @@
                                                 <li><a href="customer-account.html">Customer account / change password</a>
                                                 </li>
                                             </ul>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <h5>Order process</h5>
-                                            <ul>
-                                                <li><a href="basket.html">Shopping cart</a>
-                                                </li>
-                                                <li><a href="checkout1.html">Checkout - step 1</a>
-                                                </li>
-                                                <li><a href="checkout2.html">Checkout - step 2</a>
-                                                </li>
-                                                <li><a href="checkout3.html">Checkout - step 3</a>
-                                                </li>
-                                                <li><a href="checkout4.html">Checkout - step 4</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <h5>Pages and blog</h5>
-                                            <ul>
-                                                <li><a href="blog.html">Blog listing</a>
-                                                </li>
-                                                <li><a href="post.html">Blog Post</a>
-                                                </li>
-                                                <li><a href="faq.html">FAQ</a>
-                                                </li>
-                                                <li><a href="text.html">Text page</a>
-                                                </li>
-                                                <li><a href="text-right.html">Text page - right sidebar</a>
-                                                </li>
-                                                <li><a href="404.html">404 page</a>
-                                                </li>
-                                                <li><a href="contact.html">Contact</a>
-                                                </li>
-                                            </ul>
-                                        </div>
+                                                                                    </div>
+                                        
                                     </div>
                                 </div>
                                 <!-- /.yamm-content -->
                             </li>
                         </ul>
                     </li>
+                    
+                    
                 </ul>
 
             </div>
@@ -498,7 +475,7 @@
                 <div class="box">
                     <div class="container">
                         <div class="col-md-12">
-                            <h2>Hot this week</h2>
+                            <h2>Top this week</h2>
                         </div>
                     </div>
                 </div>
@@ -511,21 +488,21 @@
                                     <div class="flipper">
                                         <div class="front">
                                             <a href="detail.html">
-                                                <img src="img/product1.jpg" alt="" class="img-responsive">
+                                                <img src="<c:url value = '/resources/core/img/product1.jpg'/>" alt="" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="back">
                                             <a href="detail.html">
-                                                <img src="img/product1_2.jpg" alt="" class="img-responsive">
+                                                <img src="<c:url value = '/resources/core/img/product1_2.jpg' />" alt="" class="img-responsive">
                                             </a>
                                         </div>
                                     </div>
                                 </div>
                                 <a href="detail.html" class="invisible">
-                                    <img src="img/product1.jpg" alt="" class="img-responsive">
+                                    <img src="<c:url value = '/resources/core/img/product1.jpg' />" alt="" class="img-responsive">
                                 </a>
                                 <div class="text">
-                                    <h3><a href="detail.html">Fur coat with very but very very long name</a></h3>
+                                    <h3><a href="detail.html">Practising peace in time of war</a></h3>
                                     <p class="price">$143.00</p>
                                 </div>
                                 <!-- /.text -->
@@ -539,21 +516,21 @@
                                     <div class="flipper">
                                         <div class="front">
                                             <a href="detail.html">
-                                                <img src="img/product2.jpg" alt="" class="img-responsive">
+                                                <img src="<c:url value = '/resources/core/img/product2.jpg' />" alt="" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="back">
                                             <a href="detail.html">
-                                                <img src="img/product2_2.jpg" alt="" class="img-responsive">
+                                                <img src="<c:url value = '/resources/core/img/product2_2.jpg' /> " alt="" class="img-responsive">
                                             </a>
                                         </div>
                                     </div>
                                 </div>
                                 <a href="detail.html" class="invisible">
-                                    <img src="img/product2.jpg" alt="" class="img-responsive">
+                                    <img src="<c:url value = '/resources/core/img/product2.jpg'/>" alt="" class="img-responsive">
                                 </a>
                                 <div class="text">
-                                    <h3><a href="detail.html">White Blouse Armani</a></h3>
+                                    <h3><a href="detail.html">Tonglen</a></h3>
                                     <p class="price"><del>$280</del> $143.00</p>
                                 </div>
                                 <!-- /.text -->
@@ -585,21 +562,21 @@
                                     <div class="flipper">
                                         <div class="front">
                                             <a href="detail.html">
-                                                <img src="img/product3.jpg" alt="" class="img-responsive">
+                                                <img src="<c:url value = '/resources/core/img/product3.jpg' />" alt="" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="back">
                                             <a href="detail.html">
-                                                <img src="img/product3_2.jpg" alt="" class="img-responsive">
+                                                <img src="<c:url value = '/resources/core/img/product3_2.jpg' /> " alt="" class="img-responsive">
                                             </a>
                                         </div>
                                     </div>
                                 </div>
                                 <a href="detail.html" class="invisible">
-                                    <img src="img/product3.jpg" alt="" class="img-responsive">
+                                    <img src="<c:url value = '/resources/core/img/product3.jpg' /> " alt="" class="img-responsive">
                                 </a>
                                 <div class="text">
-                                    <h3><a href="detail.html">Black Blouse Versace</a></h3>
+                                    <h3><a href="detail.html">Training the mind</a></h3>
                                     <p class="price">$143.00</p>
                                 </div>
                                 <!-- /.text -->
@@ -613,21 +590,21 @@
                                     <div class="flipper">
                                         <div class="front">
                                             <a href="detail.html">
-                                                <img src="img/product3.jpg" alt="" class="img-responsive">
+                                                <img src="<c:url value = '/resources/core/img/product4.jpg' /> " alt="" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="back">
                                             <a href="detail.html">
-                                                <img src="img/product3_2.jpg" alt="" class="img-responsive">
+                                                <img src="<c:url value = '/resources/core/img/product4_2.jpg' /> " alt="" class="img-responsive">
                                             </a>
                                         </div>
                                     </div>
                                 </div>
                                 <a href="detail.html" class="invisible">
-                                    <img src="img/product3.jpg" alt="" class="img-responsive">
+                                    <img src="<c:url value = '/resources/core/img/product4.jpg' /> " alt="" class="img-responsive">
                                 </a>
                                 <div class="text">
-                                    <h3><a href="detail.html">Black Blouse Versace</a></h3>
+                                    <h3><a href="detail.html">The jazz piano</a></h3>
                                     <p class="price">$143.00</p>
                                 </div>
                                 <!-- /.text -->
@@ -641,21 +618,21 @@
                                     <div class="flipper">
                                         <div class="front">
                                             <a href="detail.html">
-                                                <img src="img/product2.jpg" alt="" class="img-responsive">
+                                                <img src="<c:url value = '/resources/core/img/product5.jpg' />" alt="" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="back">
                                             <a href="detail.html">
-                                                <img src="img/product2_2.jpg" alt="" class="img-responsive">
+                                                <img src="<c:url value = '/resources/core/img/product5_2.jpg' /> " alt="" class="img-responsive">
                                             </a>
                                         </div>
                                     </div>
                                 </div>
                                 <a href="detail.html" class="invisible">
-                                    <img src="img/product2.jpg" alt="" class="img-responsive">
+                                    <img src="<c:url value = '/resources/core/img/product5.jpg' /> " alt="" class="img-responsive">
                                 </a>
                                 <div class="text">
-                                    <h3><a href="detail.html">White Blouse Versace</a></h3>
+                                    <h3><a href="detail.html">Echoes of the souls</a></h3>
                                     <p class="price">$143.00</p>
                                 </div>
                                 <!-- /.text -->
@@ -675,18 +652,18 @@
                                     <div class="flipper">
                                         <div class="front">
                                             <a href="detail.html">
-                                                <img src="img/product1.jpg" alt="" class="img-responsive">
+                                                <img src="<c:url value = '/resources/core/img/product1.jpg' /> " alt="" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="back">
                                             <a href="detail.html">
-                                                <img src="img/product1_2.jpg" alt="" class="img-responsive">
+                                                <img src="<c:url value = 'img/product1_2.jpg' /> " alt="" class="img-responsive">
                                             </a>
                                         </div>
                                     </div>
                                 </div>
                                 <a href="detail.html" class="invisible">
-                                    <img src="img/product1.jpg" alt="" class="img-responsive">
+                                    <img src="<c:url value = '/resources/core/img/product1.jpg' /> " alt="" class="img-responsive">
                                 </a>
                                 <div class="text">
                                     <h3><a href="detail.html">Fur coat</a></h3>
@@ -711,18 +688,18 @@
                                     <div class="flipper">
                                         <div class="front">
                                             <a href="detail.html">
-                                                <img src="img/product2.jpg" alt="" class="img-responsive">
+                                                <img src="<c:url value = '/resources/core/img/product2.jpg' /> " alt="" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="back">
                                             <a href="detail.html">
-                                                <img src="img/product2_2.jpg" alt="" class="img-responsive">
+                                                <img src="<c:url value = '/resources/core/img/product2_2.jpg'/> " alt="" class="img-responsive">
                                             </a>
                                         </div>
                                     </div>
                                 </div>
                                 <a href="detail.html" class="invisible">
-                                    <img src="img/product2.jpg" alt="" class="img-responsive">
+                                    <img src="<c:url value = '/resources/core/img/product2.jpg' /> " alt="" class="img-responsive">
                                 </a>
                                 <div class="text">
                                     <h3><a href="detail.html">White Blouse Armani</a></h3>
@@ -757,18 +734,18 @@
                                     <div class="flipper">
                                         <div class="front">
                                             <a href="detail.html">
-                                                <img src="img/product3.jpg" alt="" class="img-responsive">
+                                                <img src="<c:url value = '/resources/core/img/product3.jpg' /> " alt="" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="back">
                                             <a href="detail.html">
-                                                <img src="img/product3_2.jpg" alt="" class="img-responsive">
+                                                <img src="<c:url value = '/resources/core/img/product3_2.jpg' /> " alt="" class="img-responsive">
                                             </a>
                                         </div>
                                     </div>
                                 </div>
                                 <a href="detail.html" class="invisible">
-                                    <img src="img/product3.jpg" alt="" class="img-responsive">
+                                    <img src="<c:url value = '/resources/core/img/product3.jpg' /> " alt="" class="img-responsive">
                                 </a>
                                 <div class="text">
                                     <h3><a href="detail.html">Black Blouse Versace</a></h3>
@@ -795,21 +772,21 @@
                 <div class="col-md-12">
                     <div class="box slideshow">
                         <h3>Get Inspired</h3>
-                        <p class="lead">Get the inspiration from our world class designers</p>
+                        <p class="lead">Get the inspiration from our bookstore</p>
                         <div id="get-inspired" class="owl-carousel owl-theme">
                             <div class="item">
                                 <a href="#">
-                                    <img src="img/getinspired1.jpg" alt="Get inspired" class="img-responsive">
+                                    <img src="<c:url value = '/resources/core/img/getinspired1.jpg' /> " alt="Get inspired" class="img-responsive">
                                 </a>
                             </div>
                             <div class="item">
                                 <a href="#">
-                                    <img src="img/getinspired2.jpg" alt="Get inspired" class="img-responsive">
+                                    <img src="<c:url value = '/resources/core/img/getinspired2.jpg' /> " alt="Get inspired" class="img-responsive">
                                 </a>
                             </div>
                             <div class="item">
                                 <a href="#">
-                                    <img src="img/getinspired3.jpg" alt="Get inspired" class="img-responsive">
+                                    <img src="<c:url value = '/resources/core/img/getinspired3.jpg' /> " alt="Get inspired" class="img-responsive">
                                 </a>
                             </div>
                         </div>
@@ -820,7 +797,7 @@
 
             <!-- *** BLOG HOMEPAGE ***
  _________________________________________________________ -->
-
+<!-- 
             <div class="box text-center" data-animate="fadeInUp">
                 <div class="container">
                     <div class="col-md-12">
@@ -873,7 +850,7 @@
             <!-- *** BLOG HOMEPAGE END *** -->
 
 
-        </div>
+        </div> -->
         <!-- /#content -->
 
         <!-- *** FOOTER ***
@@ -902,7 +879,7 @@
                         <ul>
                             <li><a href="#" data-toggle="modal" data-target="#login-modal">Login</a>
                             </li>
-                            <li><a href="register.html">Regiter</a>
+                            <li><a href="register.html">Register</a>
                             </li>
                         </ul>
 
@@ -915,28 +892,17 @@
 
                         <h4>Top categories</h4>
 
-                        <h5>Men</h5>
+                     
 
                         <ul>
-                            <li><a href="category.html">T-shirts</a>
+                            <li><a href="category.html">Arts & Photography</a>
                             </li>
-                            <li><a href="category.html">Shirts</a>
+                            <li><a href="category.html">Humor & entertainment</a>
                             </li>
-                            <li><a href="category.html">Accessories</a>
+                            <li><a href="category.html">Romance</a>
                             </li>
                         </ul>
 
-                        <h5>Ladies</h5>
-                        <ul>
-                            <li><a href="category.html">T-shirts</a>
-                            </li>
-                            <li><a href="category.html">Skirts</a>
-                            </li>
-                            <li><a href="category.html">Pants</a>
-                            </li>
-                            <li><a href="category.html">Accessories</a>
-                            </li>
-                        </ul>
 
                         <hr class="hidden-md hidden-lg">
 
@@ -947,7 +913,7 @@
 
                         <h4>Where to find us</h4>
 
-                        <p><strong>Obaju Ltd.</strong>
+                        <p><strong>Jebouquine Ltd.</strong>
                             <br>13/25 New Avenue
                             <br>New Heaven
                             <br>45Y 73J
@@ -1020,23 +986,18 @@
         <div id="copyright">
             <div class="container">
                 <div class="col-md-6">
-                    <p class="pull-left">© 2015 Your name goes here.</p>
+                    <p class="pull-left">© 2015 Khalil Ben Ahmed / Amine Boubaker</p>
 
                 </div>
-                <div class="col-md-6">
-                    <p class="pull-right">Template by <a href="http://bootstrapious.com/e-commerce-templates">Bootstrap Ecommerce Templates</a> with support from <a href="http://kakusei.cz">Designové předměty</a> 
-                        <!-- Not removing these links is part of the licence conditions of the template. Thanks for understanding :) -->
-                    </p>
-                </div>
+               
             </div>
         </div>
         <!-- *** COPYRIGHT END *** -->
 
 
 
-    </div>
+    
     <!-- /#all -->
-
 
     
 

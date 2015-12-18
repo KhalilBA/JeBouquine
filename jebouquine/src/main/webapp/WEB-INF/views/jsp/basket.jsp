@@ -1,3 +1,7 @@
+
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,22 +23,28 @@
 
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100' rel='stylesheet' type='text/css'>
 
-    <!-- styles -->
-    <link href="css/font-awesome.css" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/animate.min.css" rel="stylesheet">
-    <link href="css/owl.carousel.css" rel="stylesheet">
-    <link href="css/owl.theme.css" rel="stylesheet">
-
-    <!-- theme stylesheet -->
-    <link href="css/style.default.css" rel="stylesheet" id="theme-stylesheet">
-
-    <!-- your stylesheet with modifications -->
-    <link href="css/custom.css" rel="stylesheet">
-
-    <script src="js/respond.min.js"></script>
-
-    <link rel="shortcut icon" href="favicon.png">
+     <!-- styles -->
+      
+     <spring:url value="/resources/core/css/font-awesome.css" var="fontawesomeCss" />
+	 <spring:url value="/resources/core/css/bootstrap.min.css" var="bootstrapCss" />
+	 <spring:url value="/resources/core/css/owl.carousel.css" var="awlcarouselCss" />
+	 <spring:url value="/resources/core/css/animate.min.css" var="animateCss" />
+	 <spring:url value="/resources/core/css/owl.theme.css" var="owlthemeCss" />
+	 <spring:url value="/resources/core/css/style.default.css" var="defaultCss"  />
+	 <spring:url value="/resources/core/css/respond.min.js" var="respondCss"  />
+	 
+	 
+	 <link href="${fontawesomeCss}" rel="stylesheet" />
+	<link href="${bootstrapCss}" rel="stylesheet" />
+	<link href="${awlcarouselCss}" rel="stylesheet" />
+	<link href="${animateCss}" rel="stylesheet" />
+	 <link href="${owlthemeCss}" rel="stylesheet" />
+	<link href="${defaultCss}" rel="stylesheet" id="theme-stylesheet"/>
+	 <link href="${owlthemeCss}" rel="stylesheet" />
+	 
+	 
+     
+      <link rel="shortcut icon" href="favicon.png">
 
 
 
@@ -820,15 +830,27 @@
 
     <!-- *** SCRIPTS TO INCLUDE ***
  _________________________________________________________ -->
-    <script src="js/jquery-1.11.0.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.cookie.js"></script>
-    <script src="js/waypoints.min.js"></script>
-    <script src="js/modernizr.js"></script>
-    <script src="js/bootstrap-hover-dropdown.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/front.js"></script>
+    
 
+<spring:url value="/resources/core/js/jquery-1.11.0.min.js" var="jqueryminJs" />
+   <spring:url value="/resources/core/js/bootstrap.min.js" var="bootstrapminJs" />
+ <spring:url value="/resources/core/js/waypoints.min.js" var="waypointsJs" />
+ <spring:url value="/resources/core/js/modernizr.js" var="modernizrJs" />
+ <spring:url value="/resources/core/js/bootstrap-hover-dropdown.js" var="bootstrapJs" />
+ <spring:url value="/resources/core/js/owl.carousel.min.js" var="carouselJs" />
+ <spring:url value="/resources/core/js/front.js" var="frontJs" />
+  <spring:url value="/resources/core/js/respond.min.js" var="respondJs" />
+  <spring:url value="/resources/core/js/jquery.cookie.js" var="jqueryJs" />
+ 
+<script src="${jqueryminJs}"></script>
+<script src="${bootstrapminJs}"></script>
+<script src="${waypointsJs}"></script>
+<script src="${modernizrJs}"></script>
+<script src="${bootstrapJs}"></script>
+<script src="${carouselJs}"></script>
+<script src="${frontJs}"></script>
+<script src="${respondJs}"></script>
+<script src="${jqueryJs}"></script>
 
 
 </body>
