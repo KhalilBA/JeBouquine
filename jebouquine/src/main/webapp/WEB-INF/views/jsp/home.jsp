@@ -84,7 +84,7 @@
                         <h4 class="modal-title" id="Login">Customer login</h4>
                     </div>
                     <div class="modal-body">
-                        <form:form action="customer-orders" modelAttribute="connexionForm"  method="post">
+                        <form:form action="customerOrders" modelAttribute="connexionForm"  method="post">
                             <div class="form-group">
                                 <form:input type="text" path="email" class="form-control" id="email-modal" placeholder="email" />
                             </div>

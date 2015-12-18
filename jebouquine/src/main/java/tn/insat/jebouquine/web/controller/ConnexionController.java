@@ -35,30 +35,27 @@ public class ConnexionController {
         	return "home";
        
         
-        return "redirect:customer-orders";
+        return "redirect:customerOrders";
         
     }
 	
 	
-	@RequestMapping(value = {"/"}, method = RequestMethod.POST)	
+	@RequestMapping(value = {"/","/customerOrders"}, method = RequestMethod.POST)	
     public String processRegistration(@ModelAttribute("connexionForm") Client client,
             Map<String, Object> model) {
    
-		
+		System.out.println(client);
         ServletRequestAttributes attr = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
         HttpSession session = attr.getRequest().getSession(true);
-        System.out.println("I m her");
-	      												 
-       
-		
-		
-    	ClientRepository repo = context.getBean(ClientRepository.class);
-		
+        ClientRepository repo = context.getBean(ClientRepository.class);  												 
+    System.out.println(repo.findByEmailAndPassword(client.getNom(),client.getPassword()).size());
+    	
 		if(repo.findByEmailAndPassword(client.getEmail(),client.getPassword()).size()>0){
 			session.setAttribute("userType", "client");
-			session.setAttribute("client", repo.findByEmailAndPassword(client.getNom(),client.getPassword()).get(1) );
-			return "redirect:customer-orders";
+			session.setAttribute("client", repo.findByEmailAndPassword(client.getEmail(),client.getPassword()).get(0) );
+			return "redirect:customerOrders" ;
 		}
+		model.put("err","L'E-mail et/ou le mot de passe saisie ne sont pas valide.");
 		return "home";
          
         

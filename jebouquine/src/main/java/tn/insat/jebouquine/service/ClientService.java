@@ -1,9 +1,10 @@
 package tn.insat.jebouquine.service;
 
+import java.awt.List;
+
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import antlr.collections.List;
 import tn.insat.jebouquine.dataaccess.ClientRepository;
 import tn.insat.jebouquine.domain.Client;
 import tn.insat.jebouquine.domain.Panier;
@@ -16,12 +17,11 @@ public class ClientService {
 	{// Get the bean
 	ClientRepository repo = context.getBean(ClientRepository.class);
 	
-	Client client = new Client( nom,  prenom, password,  adresse, email);
-	Panier panier = new Panier();
-	client.setPanier(panier);
-	repo.save(client);
-
-	//repo.findByEmailAndPassword("yahoo", "khalil");
+	//Client client = new Client( nom,  prenom, password,  adresse, email);
+	//Panier panier = new Panier();
+	//client.setPanier(panier);
+	//repo.save(client);
+	//System.out.println(repo.findByEmailAndPassword("yahoo", "khalil").get(1));
 	
 	
 	
