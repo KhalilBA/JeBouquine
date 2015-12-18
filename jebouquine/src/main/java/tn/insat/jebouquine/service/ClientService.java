@@ -3,6 +3,7 @@ package tn.insat.jebouquine.service;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import antlr.collections.List;
 import tn.insat.jebouquine.dataaccess.ClientRepository;
 import tn.insat.jebouquine.domain.Client;
 import tn.insat.jebouquine.domain.Panier;
@@ -11,14 +12,18 @@ public class ClientService {
 	ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 	// Start the factory
 	
-	public void create(String nom, String prenom, String adresse, String email)
+	public void create(String nom, String prenom, String password, String adresse, String email)
 	{// Get the bean
 	ClientRepository repo = context.getBean(ClientRepository.class);
 	
-	Client client = new Client( nom,  prenom, adresse, email);
+	Client client = new Client( nom,  prenom, password,  adresse, email);
 	Panier panier = new Panier();
 	client.setPanier(panier);
 	repo.save(client);
+
+	//repo.findByEmailAndPassword("yahoo", "khalil");
+	
+	
 	
 
 }

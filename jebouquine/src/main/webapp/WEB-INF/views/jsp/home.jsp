@@ -1,6 +1,7 @@
 
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
 <html>
 <head>
@@ -23,7 +24,7 @@
 
       <!-- styles -->
       
-      <spring:url value="/resources/core/css/font-awesome.css" var="fontawesomeCss" />
+     <spring:url value="/resources/core/css/font-awesome.css" var="fontawesomeCss" />
 	 <spring:url value="/resources/core/css/bootstrap.min.css" var="bootstrapCss" />
 	 <spring:url value="/resources/core/css/owl.carousel.css" var="awlcarouselCss" />
 	 <spring:url value="/resources/core/css/animate.min.css" var="animateCss" />
@@ -83,19 +84,19 @@
                         <h4 class="modal-title" id="Login">Customer login</h4>
                     </div>
                     <div class="modal-body">
-                        <form action="customer-orders.html" method="post">
+                        <form:form action="customer-orders" modelAttribute="connexionForm"  method="post">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="email-modal" placeholder="email">
+                                <form:input type="text" path="email" class="form-control" id="email-modal" placeholder="email" />
                             </div>
                             <div class="form-group">
-                                <input type="password" class="form-control" id="password-modal" placeholder="password">
+                                <form:input type="password" path="password" class="form-control" id="password-modal" placeholder="password" />
                             </div>
 
                             <p class="text-center">
-                                <button class="btn btn-primary"><i class="fa fa-sign-in"></i> Log in</button>
+                                <button class="btn btn-primary" type="submit"><i class="fa fa-sign-in"></i> Log in</button>
                             </p>
 
-                        </form>
+                        </form:form>
 
                         <p class="text-center text-muted">Not registered yet?</p>
                         <p class="text-center text-muted"><a href="register.html"><strong>Register now</strong></a>! It is easy and done in 1&nbsp;minute and gives you access to special discounts and much more!</p>

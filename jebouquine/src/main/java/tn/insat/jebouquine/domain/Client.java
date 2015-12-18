@@ -32,23 +32,24 @@ import javax.persistence.Table;
 		
 		private String nom;
 		private String prenom ; 
+		private String password ; 
 		private String adresse ; 
 		private String email ; 
 		
 		
 		@OneToOne(cascade=CascadeType.ALL)  
-		@JoinColumn(name="adresse_id")
+		@JoinColumn(name="panier_id")
 		Panier panier ;
 		
 		
 		public Client()
 		{}
 		
-
-		public Client(String nom, String prenom, String adresse, String email) {
+		public Client(String nom, String prenom, String password, String adresse, String email) {
 			super();
 			this.nom = nom;
 			this.prenom = prenom;
+			this.password = password;
 			this.adresse = adresse;
 			this.email = email;
 		}
@@ -62,6 +63,18 @@ import javax.persistence.Table;
 
 
 
+
+
+
+
+		public String getPassword() {
+			return password;
+		}
+
+
+		public void setPassword(String password) {
+			this.password = password;
+		}
 
 
 		public long getId() {

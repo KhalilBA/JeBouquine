@@ -1,8 +1,6 @@
 package tn.insat.jebouquine.test;
 
-import tn.insat.jebouquine.service.ClientService;
-import tn.insat.jebouquine.service.CommandeService;
-import tn.insat.jebouquine.service.LivreService;
+
 
 public class Test {
 
@@ -55,15 +53,15 @@ public class Test {
 //				
 //				dao.create(l);
 		
-		ClientService cs =new ClientService();
-		cs.create("amine", "boubaker", "bardo", "yahoo");
+		//ClientService cs =new ClientService();
+		//cs.create("amine", "boubaker","tbhthb", "bardo", "yahoo");
 		
-		LivreService ls = new LivreService(); 
-		ls.create("la belle", "roman", 300, "il etait une fois", 3487899, "mardi13decembre");
+	//	LivreService ls = new LivreService(); 
+		//ls.create("la belle", "roman", 300, "il etait une fois", 3487899, "mardi13decembre");
 		
-		CommandeService com = new CommandeService();
-		com.creat("avril", 23455);
-			
+	//	CommandeService com = new CommandeService();
+	//	com.creat("avril", 23455);
+		
 		
 		
 		
