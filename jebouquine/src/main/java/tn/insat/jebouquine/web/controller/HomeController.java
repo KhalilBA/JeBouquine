@@ -9,6 +9,14 @@ public class HomeController {
 
 	@RequestMapping(value="/",method=RequestMethod.GET)
 	public String home() {
-		return "home";
-	}
+		return "home";}
+		
+		@RequestMapping(value="/basket",method=RequestMethod.GET)
+		public String basket() {
+			
+			
+			return "basket";
+			}
+	
+	
 }
