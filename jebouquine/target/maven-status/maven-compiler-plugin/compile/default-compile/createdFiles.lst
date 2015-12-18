@@ -12,7 +12,6 @@ tn\insat\jebouquine\dataaccess\ClientRepository.class
 tn\insat\jebouquine\domain\Panier.class
 tn\insat\jebouquine\service\LivreService.class
 tn\insat\jebouquine\dataaccess\LivreRepository.class
-tn\insat\jebouquine\web\controller\ConnexionController.class
 tn\insat\jebouquine\domain\Auteur.class
 tn\insat\jebouquine\service\ClientService.class
 tn\insat\jebouquine\domain\Livre.class

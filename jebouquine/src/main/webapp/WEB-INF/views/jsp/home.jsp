@@ -66,7 +66,10 @@
                 <ul class="menu">
                     <li><a href="#" data-toggle="modal" data-target="#login-modal">Login</a>
                     </li>
-                    <li><a href="register.html">Register</a>
+                    <li>
+                    <form:form action="register"  method="post" >
+                 	<input id="registerButton"  type="submit" value="register" >                
+               		</form:form>
                     </li>
                     <li><a href="contact.html">Contact</a>
                     </li>
@@ -84,7 +87,7 @@
                         <h4 class="modal-title" id="Login">Customer login</h4>
                     </div>
                     <div class="modal-body">
-                        <form:form action="customerOrders" modelAttribute="connexionForm"  method="post">
+                        <form:form action="" modelAttribute="connexionForm"  method="post">
                             <div class="form-group">
                                 <form:input type="text" path="email" class="form-control" id="email-modal" placeholder="email" />
                             </div>

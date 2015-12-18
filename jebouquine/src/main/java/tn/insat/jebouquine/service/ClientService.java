@@ -17,11 +17,11 @@ public class ClientService {
 	{// Get the bean
 	ClientRepository repo = context.getBean(ClientRepository.class);
 	
-	//Client client = new Client( nom,  prenom, password,  adresse, email);
-	//Panier panier = new Panier();
-	//client.setPanier(panier);
-	//repo.save(client);
-	//System.out.println(repo.findByEmailAndPassword("yahoo", "khalil").get(1));
+	Client client = new Client( nom,  prenom, password,  adresse, email);
+	Panier panier = new Panier();
+	client.setPanier(panier);
+	repo.save(client);
+	
 	
 	
 	
